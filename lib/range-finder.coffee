@@ -12,9 +12,7 @@ class RangeFinder
   # Public
   ranges: ->
     selectionRanges = @selectionRanges()
-    if selectionRanges.length is 0
-      [@sortableRangeFrom(@sortableRangeForEntireBuffer())]
-    else
+    if selectionRanges.length > 0
       selectionRanges.map (selectionRange) =>
         @sortableRangeFrom(selectionRange)
 

@@ -15,7 +15,8 @@ class RangeFinder
     if selectionRanges.length > 0
       selectionRanges.map (selectionRange) =>
         @sortableRangeFrom(selectionRange)
-
+    else
+      return []
   # Internal
   selectionRanges: ->
     @editor.getSelectedBufferRanges().filter (range) ->
